@@ -1,25 +1,37 @@
-import logo from './logo.svg';
+import React , { useState ,useEffect} from 'react';
 import './App.css';
+import Loader from './components/Loader'
+import Navbar from './components/Navbar';
+import Slideshow from './components/Slideshow';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+const App = () => {
+   
+  let name = 'Smriti Naik'
+  let details = {name};
+
+  const [loading, setLoading] = useState(true);
+
+  const sleep = (milliseconds) => {
+    return new Promise((resolve) => setTimeout(resolve, milliseconds));
+  };
+
+  const wait = async (milliseconds = 2000) => {
+    await sleep(milliseconds);
+    setLoading(false);
+  };
+
+  useEffect(() => {
+    wait(2000);
+  });
+
+  if(loading)return <Loader />
+
+    return (
+      <>
+      <Navbar />  
+      </>
+    );
 }
 
 export default App;

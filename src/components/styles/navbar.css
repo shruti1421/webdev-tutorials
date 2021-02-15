@@ -1,0 +1,51 @@
+body{
+    margin: 0;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    float: right;
+    top: 0;
+    padding-right: 5%;
+    
+}
+
+li{
+    list-style-type: none;
+    margin-top: 2vh;
+    font-size: 2vh;
+    top: 0;
+    float: left;
+}
+.logo a{
+    margin-right: 134vh;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    line-height: 4vh;
+    padding: 2vh;
+    font-family:'Lucida Handwriting';
+    top: 0;
+    cursor: pointer;
+
+}
+
+a:hover{
+    background-color: coral;
+}
+
+nav{
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    top:0;
+}
+
+.navbar ul{
+    margin: 0;
+
+}
+
+
